@@ -1,22 +1,156 @@
 @import 'utils';
+@import 'main';
 
-.panel-wrap {
+
+.edit-toolbar{
+  border: 1px solid #ddd;
+  margin:0px !important;
+}
+.edit-wrap{
+  border-radius: 2px;
+  border:1px solid #ddd;
+  height:30vh;
+  position: relative;
+  .panel-bg{
+    z-index:10;
+    position: absolute;
+    width:100%;
+    height:100%;
+  }
+  .panel{
+    width:100%;
+    height:100%;
+    z-index:30;
+    position: absolute;
+    .content{
+    }
+  }
+  .filter{
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index:20;
+  }
+  .nickname{
+    position: absolute;
+    float:right;
+    right:3vw;
+    bottom:2vw;
+    z-index:40;
+    margin:0;
+  }
+}
+
+.search-wrap{
+  width: 100%;
+  height:30px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+  .search-panel{
+    height:30px;    
+    width: 100%;
+    border-radius: 15px;
+    border:1px solid #ddd;
+    input[type="text"]{
+      width:100%;
+      height:30px;
+      line-height: 30px;    
+    } 
+  }  
+}
+
+input[type="text"]{
+  border:none;
+  background: none;
+  padding-left:10px;
+  padding-right:10px;
+  &:focus{
+    outline: none;
+  }
+} 
+
+
+.panel-wrap{
+  border-radius: 2px;
+  border:1px solid #ddd;
+  height:30vh;
+  margin-top:30px;
+  position: relative;
+  .panel-bg{
+    z-index:10;
+    position: absolute;
+    width:100%;
+    height:100%;
+  }
+  .panel{
+    width:100%;
+    height:100%;
+    z-index:30;
+    position: absolute;
+    .header{
+      border-bottom: 1px solid #ddd;
+      margin-left:7px;
+      margin-right:7px;
+    }
+    .content{
+      
+    }
+  }
+  .nickname{
+    position: absolute;
+    float:right;
+    right:3vw;
+    bottom:2vw;
+    z-index:40;
+    margin:0;
+  }
+  .filter{
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index:20;
+  }
+}
+
+.ql-editor{
   display: flex;
-  align-items: center;
   justify-content: center;
-  height:100vh;
+  flex-direction: column;
+}
+
+.filter-black-25{
+  background-color : rgba(0, 0, 0, 0.50);  
+}
+.filter-black-50{
+  background-color : rgba(0, 0, 0, 0.50);  
+}
+.filter-black-75{
+  background-color : rgba(0, 0, 0, 0.75);  
+}
+
+.filter-white-25{
+  background-color : rgba(255, 255, 255, 0.50);  
+}
+.filter-white-50{
+  background-color : rgba(255, 255, 255, 0.50);  
+}
+.filter-white-75{
+  background-color : rgba(255, 255, 255, 0.75);  
+}
+
+
+
+/* Tell Quill not to scroll */
+#note-content {
+  height: auto;
+  min-height: 100%;
+  padding: 50px;
+  font-family: 'MiSaeng';
   
-  & .panel{
-    background-color:#777;
-    color:#fff;
-    width:50vw;
-    height:20vw;
-    padding: 0 5vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  & .center{
-    text-align: center;
-  }
+}
+#note-content .ql-editor {
+  font-size: 18px;
+  color:white;
+  overflow-y: visible; 
 }

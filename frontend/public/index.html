@@ -9,6 +9,8 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!-- <link href="https://cdn.quilljs.com/1.3.3/quill.snow.css" rel="stylesheet"> -->
+    <link href="https://cdn.quilljs.com/1.3.3/quill.bubble.css" rel="stylesheet">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -20,8 +22,28 @@
     -->
     
     <!-- custom -->
-    <title>React App</title>
-    
+    <title>감성변태 - 개소리를 감성과 함께 - </title>
+    <style>
+      .ql-editor{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .ql-font-MiSaeng{
+        font-family: 'MiSaeng' !important;
+      }
+      .ql-bg-pink-lighten-2{
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color:rgba(240, 98, 148,0.5);
+      }
+
+      .ql-color-white{
+        color:#fff;
+      }
+
+    </style>
   </head>
   <body>
     <noscript>

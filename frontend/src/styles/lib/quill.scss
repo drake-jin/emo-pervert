@@ -1,0 +1,40 @@
+
+/* Tell Quill not to scroll */
+#note-content {
+  height: auto;
+  min-height: 100%;
+  padding: 50px;
+}
+#note-content .ql-editor {
+  font-size: 18px;
+  color:white;
+  overflow-y: visible; 
+}
+
+/* Specify our own scrolling container */
+#quill-note {
+  height: 100%;
+  min-height: 100%;
+  overflow-y: auto;
+}
+
+
+#note-toolbar .ql-font span[data-label='미생']::before {
+  font-family: 'MiSaeng';
+}
+/* Set content font-families */
+.ql-font-mirza {
+  font-family: 'MiSaeng';
+}
+
+/* Tell Quill not to scroll */
+#note-content {
+  height: auto;
+  min-height: 100%;
+  padding: 50px;
+}
+#note-content .ql-editor {
+  font-size: 18px;
+  color:white;
+  overflow-y: visible; 
+}
