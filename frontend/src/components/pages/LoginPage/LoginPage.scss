@@ -15,7 +15,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @include material-shadow(3);
   }
   & .center{
     text-align: center;
