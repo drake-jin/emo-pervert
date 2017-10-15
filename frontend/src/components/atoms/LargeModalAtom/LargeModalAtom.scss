@@ -1,0 +1,24 @@
+@media (min-width: 992px){
+  .modal-lg{
+    width: 85%;
+  }
+}
+.text-black{
+  text-align: center;
+  color:#000;
+}
+.panel-wrap{
+  padding: 20px 30px;
+
+  & .panel{
+    width:100%;
+    box-shadow: 1px 5px 10px #777;
+    padding: 20px 30px;
+    margin: 20px 0px;
+  }
+}
+
+.popover{
+  max-width:80%;
+  width:80%;
+}

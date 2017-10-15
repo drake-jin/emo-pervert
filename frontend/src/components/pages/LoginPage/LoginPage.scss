@@ -1,0 +1,23 @@
+@import 'utils';
+
+.panel-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:100vh;
+  
+  & .panel{
+    background-color:#777;
+    color:#fff;
+    width:50vw;
+    height:20vw;
+    padding: 0 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include material-shadow(3);
+  }
+  & .center{
+    text-align: center;
+  }
+}

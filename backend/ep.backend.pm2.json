@@ -1,0 +1,14 @@
+{
+  "apps": [{
+    "name": "web.batch",
+    "script": "src/batchToService/app.js",
+    "watch": ["src"],
+    "ignore_watch" : ["node_modules", "logs"],
+    "watch_options": {
+      "followSymlinks": false
+    },
+    "env": {
+      "NODE_PATH": "src"
+    }
+  }]
+}
