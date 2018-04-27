@@ -1,0 +1,53 @@
+
+
+
+service:
+  name: emo-pervert-api
+
+# Add the serverless-webpack plugin
+plugins:
+  - serverless-webpack
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: dev # Set the default stage used. Default is dev
+  region: ap-northeast-2 # Overwrite the default region used. Default is us-east-1
+  profile: emo-pervert-admin # The default profile to use with this service
+  memorySize: 512 # Overwrite the default memory size. Default is 1024
+  deploymentBucket:
+    name: emo-pervert-api.${self:provider.stage} # Overwrite the default deployment bucket
+    serverSideEncryption: AES256 # when using server-side encryption
+
+functions:
+  createPoet:
+    handler: src/poets.createPoet
+    events:
+      - http:
+          path: poets
+          method: post
+
+  getPoetList:
+    handler: src/poets.listPoet
+    events:
+      - http:
+          path: poets
+          method: get
+  getPoet:
+    handler: src/poets.detailPoet
+    events:
+      - http:
+          path: poets/{id}
+          method: get
+  updatePoet:
+    handler: src/poets.updatePoet
+    events:
+      - http:
+          path: poets/{id}
+          method: put
+  deletePoet:
+    handler: src/poets.deletePoet
+    events:
+      - http:
+          path: poets/{id}
+          method: delete

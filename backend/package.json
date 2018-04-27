@@ -1,46 +1,19 @@
 {
-  "name": "backend",
+  "name": "aws-nodejs-typescript",
   "version": "1.0.0",
-  "main": "src/index.js",
-  "license": "MIT",
+  "description": "Serverless webpack example using Typescript",
+  "main": "handler.js",
   "scripts": {
-    "start:schedule": "NODE_PATH=src node src/csvToMySQL/app.js",
-    "start:batch": "NODE_PATH=src node src/batchToService/app.js",
-    "start": "pm2 start web.backend.pm2.json web.batch.pm2.json",
-    "stop": "pm2 stop web.backend.pm2.json web.batch.pm2.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "bluebird": "^3.5.0",
-    "co-busboy": "^1.3.1",
-    "convert-newline": "^0.0.5",
-    "detect-character-encoding": "^0.5.1",
-    "iconv": "^2.3.0",
-    "is-empty": "^1.2.0",
-    "kcors": "^2.2.1",
-    "koa": "^2.3.0",
-    "koa-body": "^2.3.0",
-    "koa-error": "^3.1.0",
-    "koa-json-error": "^3.1.2",
-    "koa-logger": "^3.0.1",
-    "koa-logger-winston": "^0.0.2",
-    "koa-multer": "^1.0.2",
-    "koa-mysql": "^1.0.3",
-    "koa-onerror": "^3.1.0",
-    "koa-router": "^7.2.1",
-    "koa-router-multer": "^1.3.0",
-    "md5": "^2.2.1",
-    "moment": "^2.18.1",
-    "moment-timezone": "^0.5.13",
-    "node-schedule": "^1.2.4",
-    "request": "^2.81.0",
-    "sqlstring": "^2.2.0",
-    "winston": "^2.3.1",
-    "winston-daily-rotate-file": "^1.4.6"
-  },
   "devDependencies": {
-    "eslint": "^4.5.0",
-    "eslint-config-airbnb-base": "^11.3.2",
-    "eslint-plugin-import": "^2.7.0"
-  }
+    "@types/aws-lambda": "0.0.22",
+    "@types/node": "^8.0.57",
+    "serverless-webpack": "^4.0.0",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.5.2",
+    "webpack": "^3.6.0"
+  },
+  "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
+  "license": "MIT"
 }
