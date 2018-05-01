@@ -1,0 +1,31 @@
+{
+  "apps": [
+    {
+      "name": "reward.api.stg",
+      "cwd": ".",
+      "script": "/usr/bin/java",
+      "args": [
+        "-Xmx512m",
+        "-Xms128m",
+        "-Xss1024k",
+        "-jar",
+        "./target/bookdealko.api.server.jar"
+      ],
+      "watch": "./target",
+      "env": {
+        
+      },
+      "exec_interpreter": "none",
+      "exec_mode": "fork",
+
+      "instances": 1,
+
+      "merge_logs": true,
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "error_file": "./Logs/pm2/dev.stderr.log",
+      "out_file": "./Logs/pm2/dev.stdout.log",
+      "pid_file": "./Logs/reward.api.dev.pid",
+      "node_args": []
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "apps": [
+    {
+      "name": "reward.api.dev",
+      "cwd": ".",
+      "script": "./node_modules/serverless/bin/serverless",
+      "args": [
+        "offline",
+        "start",
+        "-p 3001",
+        "--noTimeout",
+        "--corsDisallowCredentials false"
+      ],
+      "env": {
+        "NODE_ENV": "dev"
+      },
+      "exec_interpreter": "none",
+      "exec_mode": "fork",
+
+      "instances": 1
+    }
+  ]
+}

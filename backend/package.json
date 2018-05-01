@@ -4,11 +4,29 @@
   "description": "Serverless webpack example using Typescript",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:init": "./pm2/init.sh",
+    "dev:start": "pm2 start ./pm2/reward.api.dev.json && pm2 logs reward.api.dev",
+    "dev:reset": "./pm2/reset.sh",
+    "stg:deploy": "NODE_ENV=stg SLS_DEBUG=* sls deploy --verbose",
+    "prod:deploy": "NODE_ENV=dev SLS_DEBUG=* sls deploy --verbose"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.230.1",
+    "graphql": "^0.13.2",
+    "uuid": "^3.2.1",
+    "yaml": "^0.3.0",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "0.0.22",
+    "@types/aws-sdk": "^2.7.0",
+    "@types/graphql": "^0.13.0",
     "@types/node": "^8.0.57",
+    "@types/uuid": "^3.4.3",
+    "serverless": "^1.26.1",
+    "serverless-dynamodb-local": "^0.2.30",
+    "serverless-offline": "^3.20.3",
+    "serverless-plugin-simulate": "^0.0.17",
     "serverless-webpack": "^4.0.0",
     "ts-loader": "^2.3.7",
     "typescript": "^2.5.2",
