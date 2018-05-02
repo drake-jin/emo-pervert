@@ -1,6 +1,4 @@
-
 const YAML = require('yamljs')
-
 
 // load yaml files
 // __dirname) === output: '/'
