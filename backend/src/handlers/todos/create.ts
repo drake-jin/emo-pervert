@@ -1,5 +1,5 @@
 import { v4 as uuid } from 'uuid';
-import dynamoDb from '../lib/dynamodb';
+import dynamoDb from '../../lib/dynamodb';
 
 module.exports.create = (event, context, callback) => {
   const timestamp = new Date().getTime();

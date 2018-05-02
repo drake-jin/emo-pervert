@@ -1,4 +1,4 @@
-import dynamoDb from '../lib/dynamodb';
+import dynamoDb from '../../lib/dynamodb';
 
 module.exports.get = (event, context, callback) => {
   const params = {

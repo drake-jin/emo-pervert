@@ -1027,7 +1027,14 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-cross-spawn@^5.0.1:
+cross-env@^5.1.4:
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-5.1.4.tgz#f61c14291f7cc653bb86457002ea80a04699d022"
+  dependencies:
+    cross-spawn "^5.1.0"
+    is-windows "^1.0.0"
+
+cross-spawn@^5.0.1, cross-spawn@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
   dependencies:
@@ -2212,6 +2219,10 @@ is-docker@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-docker/-/is-docker-1.1.0.tgz#f04374d4eee5310e9a8e113bf1495411e46176a1"
 
+is-empty@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/is-empty/-/is-empty-1.2.0.tgz#de9bb5b278738a05a0b09a57e1fb4d4a341a9f6b"
+
 is-extendable@^0.1.0, is-extendable@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/is-extendable/-/is-extendable-0.1.1.tgz#62b110e289a471418e3ec36a617d472e301dfc89"
@@ -2321,7 +2332,7 @@ is-stream@^1.0.0, is-stream@^1.0.1, is-stream@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
 
-is-windows@^1.0.2:
+is-windows@^1.0.0, is-windows@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/is-windows/-/is-windows-1.0.2.tgz#d1850eb9791ecd18e6182ce12a30f396634bb19d"
 

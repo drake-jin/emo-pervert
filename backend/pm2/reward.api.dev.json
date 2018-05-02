@@ -16,7 +16,6 @@
       },
       "exec_interpreter": "none",
       "exec_mode": "fork",
-
       "instances": 1
     }
   ]

@@ -2,17 +2,17 @@
   "name": "aws-nodejs-typescript",
   "version": "1.0.0",
   "description": "Serverless webpack example using Typescript",
-  "main": "handler.js",
   "scripts": {
     "dev:init": "./pm2/init.sh",
     "dev:start": "pm2 start ./pm2/reward.api.dev.json && pm2 logs reward.api.dev",
     "dev:reset": "./pm2/reset.sh",
-    "stg:deploy": "NODE_ENV=stg SLS_DEBUG=* sls deploy --verbose",
-    "prod:deploy": "NODE_ENV=dev SLS_DEBUG=* sls deploy --verbose"
+    "stg:deploy": "./node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=stg SLS_DEBUG=* sls deploy --verbose",
+    "prod:deploy": "./node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=prod SLS_DEBUG=* sls deploy --verbose"
   },
   "dependencies": {
     "aws-sdk": "^2.230.1",
     "graphql": "^0.13.2",
+    "is-empty": "^1.2.0",
     "uuid": "^3.2.1",
     "yaml": "^0.3.0",
     "yamljs": "^0.3.0"

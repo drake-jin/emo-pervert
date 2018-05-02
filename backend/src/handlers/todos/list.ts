@@ -1,4 +1,5 @@
-import dynamoDb from '../lib/dynamodb';
+import dynamoDb from '../../lib/dynamodb';
+import config from '../../config'
 
 const params = {
   TableName: 'REWARD-TODO',
@@ -6,6 +7,7 @@ const params = {
 
 module.exports.list = (event, context, callback) => {
   // fetch all todos from the database
+  console.log(config)
   dynamoDb.scan(params, (error, result) => {
     // handle potential errors
     if (error) {

@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
   dynamodb-local :
-    container_name: reward-dynamondb
+    container_name: reward-dynamodb
     build: ./dynamodb
     ports:
       - "28000:8000"

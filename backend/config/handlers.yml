@@ -1,5 +1,5 @@
 create:
-  handler: src/todos/create.create
+  handler: src/handlers/todos/create.create
   events:
     - http:
         path: todos
@@ -7,7 +7,7 @@ create:
         cors: false
 
 list:
-  handler: src/todos/list.list
+  handler: src/handlers/todos/list.list
   events:
     - http:
         path: todos
@@ -15,7 +15,7 @@ list:
         cors: false
 
 get:
-  handler: src/todos/get.get
+  handler: src/handlers/todos/get.get
   events:
     - http:
         path: todos/{id}
@@ -23,7 +23,7 @@ get:
         cors: false
 
 update:
-  handler: src/todos/update.update
+  handler: src/handlers/todos/update.update
   events:
     - http:
         path: todos/{id}
@@ -31,7 +31,7 @@ update:
         cors: false
 
 delete:
-  handler: src/todos/delete.delete
+  handler: src/handlers/todos/delete.delete
   events:
     - http:
         path: todos/{id}

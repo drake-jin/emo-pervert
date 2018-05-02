@@ -2,7 +2,7 @@ TODO:
   Type: 'AWS::DynamoDB::Table'
   DeletionPolicy: Retain
   Properties:
-    TableName: ${self:provider.environment.DYNAMODB_TABLE_PREFIX}-TODO
+    TableName: REWARD-TODO
     AttributeDefinitions:
       -
         AttributeName: id

@@ -14,7 +14,7 @@ provider:
   runtime: nodejs6.10
   stage: ${env:NODE_ENV} # Set the default stage used. Default is dev
   region: ap-northeast-2 # Overwrite the default region used. Default is us-east-1
-  profile: ${file(./config/env.yml)}.Profile # The default profile to use with this service
+  profile: ${file(./config/env.yml):Profile} # The default profile to use with this service
   memorySize: 512 # Overwrite the default memory size. Default is 1024
   deploymentBucket:
     name: reward.${self:provider.stage} # Overwrite the default deployment bucket
@@ -32,7 +32,7 @@ provider:
         - dynamodb:DeleteItem
       Resource: "arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.DYNAMODB_TABLE_PREFIX}-*"
 
-functions: ${file(./config/router.yml)}
+functions: ${file(./config/handlers.yml)}
 
 resources:
   Resources: ${file(./config/tables.yml)}

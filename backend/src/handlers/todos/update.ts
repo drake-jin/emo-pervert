@@ -1,4 +1,4 @@
-import dynamoDb from '../lib/dynamodb';
+import dynamoDb from '../../lib/dynamodb';
 
 module.exports.update = (event, context, callback) => {
   const timestamp = new Date().getTime();
