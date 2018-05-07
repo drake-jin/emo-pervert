@@ -22,7 +22,8 @@ There are markdown documents and Those explain more detail about this project.
 
 # Working
 
-I'll switch position per week.
+- I'll switch position per week.
+- One day one commit.
 
 # Description
 
