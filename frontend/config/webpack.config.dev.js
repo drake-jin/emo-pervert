@@ -145,11 +145,9 @@ module.exports = {
             include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
-              
               compact: true,
             },
           },
-
           // Compile .tsx?
           {
             test: /\.(ts|tsx)$/,
@@ -170,7 +168,49 @@ module.exports = {
           // In production, we use a plugin to extract that CSS to a file, but
           // in development "style" loader enables hot editing of CSS.
           {
-            test: /\.css$/,
+            test: /\.(css|sass|scss)$/,
+            use: [
+              require.resolve('style-loader'),
+              {
+                loader: require.resolve('typings-for-css-modules-loader'),
+                options: {
+                  importLoaders: 1,
+                  camelCase: true,
+                  namedExport: true,
+                  modules: true,
+                  localIdentName: '[name]__[local]__[hash:base64:5]'
+                },
+              },
+              {
+                loader: require.resolve('postcss-loader'),
+                options: {
+                  // Necessary for external CSS imports to work
+                  // https://github.com/facebookincubator/create-react-app/issues/2677
+                  ident: 'postcss',
+                  plugins: () => [
+                    require('postcss-flexbugs-fixes'),
+                    autoprefixer({
+                      browsers: [
+                        '>1%',
+                        'last 4 versions',
+                        'Firefox ESR',
+                        'not ie < 9', // React doesn't support IE8 anyway
+                      ],
+                      flexbox: 'no-2009',
+                    }),
+                  ],
+                },
+              },
+              {
+                loader: 'sass-loader',
+                options: {
+                  sourceMap: false
+                }
+              }
+            ],
+          },
+          {
+            test: /\.scss$/,
             use: [
               require.resolve('style-loader'),
               {
@@ -199,6 +239,12 @@ module.exports = {
                   ],
                 },
               },
+              {
+                loader: require.resolve('sass-loader'),
+                options: {
+                  includePaths: [paths.globalStyles]
+                }
+              }
             ],
           },
           // "file" loader makes sure those assets get served by WebpackDevServer.
@@ -256,6 +302,12 @@ module.exports = {
     // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
     // You can remove this if you don't use Moment.js:
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    new webpack.WatchIgnorePlugin([
+      /scss\.d\.ts$/
+    ]),
+    new WatchTimestampsPlugin([
+      /scss\.d\.ts$/,
+    ])
     // Perform type checking and linting in a separate process to speed up compilation
     new ForkTsCheckerWebpackPlugin({
       async: false,

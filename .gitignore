@@ -1,7 +1,34 @@
-logs/*.log
-*.log
+
+
+
+# Common
 node_modules
-**/npm-debug.log
-*.swp
+coverage
+build
+
+.env.stg
+.env.prod
 .DS_Store
-*.csv
+*.swp
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+## Common - I hate lock files
+yarn.lock
+package-lock.json
+
+logs/*.log
+**/*.log
+
+# Reward - frontend
+
+**/*.d.ts
+
+# Reward - backend
+
+jspm_packages
+.serverless
+.webpack
+.serverless
