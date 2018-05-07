@@ -15,10 +15,16 @@ Frontend made by single page application using lambda
 If you wanna more information go to directories.
 There are markdown documents and Those explain more detail about this project.
 
-# UseCase Diagram - Phase1
+# Design Document[Phase1]
 
-![Use Case Diagram - Phase1](https://raw.githubusercontent.com/drake-jin/reward/master/docs/usecase_diagram.jpg)
+1. [Use Case Diagram - Phase1](https://raw.githubusercontent.com/drake-jin/reward/master/docs/usecase_diagram.jpg)
+2. [Detail of Functions Table](https://docs.google.com/spreadsheets/d/10noo2FhJnNLAz3ABwFLMmTwkW0UsxsY0dShpiSlKfsk/edit?usp=sharing)
 
-# Detail of Functions Table - Phase1
+# Working
 
-[Detail of Functions Table](https://docs.google.com/spreadsheets/d/10noo2FhJnNLAz3ABwFLMmTwkW0UsxsY0dShpiSlKfsk/edit?usp=sharing)
+I'll switch position per week.
+
+# Description
+
+1. Backend is made by lambda,
+2. Frontend is made by react-ts
